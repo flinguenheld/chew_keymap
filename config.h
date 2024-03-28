@@ -25,7 +25,8 @@
 
 /* Auto shift ♥ */
 #define AUTO_SHIFT_TIMEOUT 115
-#define TAPPING_TERM 155
+#define TAPPING_TERM 145
+// #define TAPPING_TERM 155
 
 /* Unicode */
 // #define UNICODE_SELECTED_MODES UC_LNX

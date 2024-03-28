@@ -33,3 +33,8 @@ enum custom_keys {
   CS_U_DIAERESIS,
   CS_Y_DIAERESIS,
 };
+
+// Tap Dance keycodes
+enum td_keycodes {
+    LT_MOUSE_STAB
+};

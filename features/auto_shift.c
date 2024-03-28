@@ -8,7 +8,7 @@
    Exceptions like Tab or Enter */
 bool get_auto_shifted_key(uint16_t keycode, keyrecord_t *record) {
   switch (keycode) {
-  // case KC_TAB:
+  case KC_TAB:
   case KC_ENT:
 
   case US_EACU:

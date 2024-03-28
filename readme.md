@@ -1,13 +1,11 @@
 # CHEW KEYMAP
 
-### Custom // keymap
-
 French layout based on the US international extended keymap.
 It uses the _best_ qmk features :
 
 - combos ♥
 - auto shift
-- leader
+- leader key
 
 I tried to optimise key positions for helix and hyprland while limit digrams.\
 
@@ -25,7 +23,7 @@ Navigate into the keymap folder and launch this command for both sides :
 
 and :
 
-    Click twice on the flash button and use nautilus for instance to clic on the keyboard.
+    Click twice on the flash button and use thunar for instance to clic on the keyboard.
     Don't forget to flash with the double tap bootloader define before soldering.
 
 #### Layout

@@ -18,20 +18,6 @@
 #include "keycodes.h"
 
 // clang-format off
-bool process_record_user(uint16_t keycode, keyrecord_t *record) {
-
-    /* Macros */
-    switch (keycode) {
-
-        case UNICODE:
-            if (record->event.pressed) {
-                tap_code16(C(S(KC_U)));
-            } break;
-    }
-
-    return true;
-}
-
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
     [_BASE] = LAYOUT_split_5_5_4_3(
@@ -43,7 +29,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
             KC_Z      ,     KC_X      ,     KC_Q      ,     KC_Y      ,                                                            KC_C     ,      KC_G     ,      KC_H     ,      KC_M     ,
     //|---------------+---------------+---------------+---------------|                                                     |---------------+---------------+---------------+---------------|
     //                       |-----------------------+-----------------------+-----------------|   |--------------+-----------------------+-----------------------!
-                               LT(_MOUSE, S(KC_TAB)) ,    CTL_T(KC_SPACE)    ,  ALT_T(KC_TAB)  ,         KC_ENT   ,  LT(_NUMERIC, KC_DOT)  ,  LT(_ARROWS, KC_COMM)
+                                 TD(LT_MOUSE_STAB)   ,    CTL_T(KC_SPACE)    ,  ALT_T(KC_TAB)  ,         KC_ENT   ,  LT(_NUMERIC, KC_DOT)  ,  LT(_ARROWS, KC_COMM)
     //                       |-----------------------+-----------------------+-----------------|   |--------------+-----------------------+-----------------------!
     ),
 

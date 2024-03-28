@@ -109,9 +109,9 @@ uint16_t COMBO_LEN = COMBO_LENGTH;
 const uint16_t PROGMEM combo_leader[] = {CTL_T(KC_SPACE), LT(_NUMERIC, KC_DOT), COMBO_END};
 const uint16_t PROGMEM combo_bootloader[] = {KC_BSPC, KC_K, KC_J, KC_V, COMBO_END};
 
-const uint16_t PROGMEM combo_adj[] = {LT(_MOUSE, S(KC_TAB)), LT(_ARROWS, KC_COMM), COMBO_END};
+const uint16_t PROGMEM combo_adj[] = {TD(LT_MOUSE_STAB), LT(_ARROWS, KC_COMM), COMBO_END};
 const uint16_t PROGMEM combo_fn[] = {LT(_NUMERIC, KC_DOT), KC_N, COMBO_END};
-const uint16_t PROGMEM combo_left_hand[] = {LT(_MOUSE, S(KC_TAB)), GUI_T(KC_ESC), COMBO_END};
+const uint16_t PROGMEM combo_left_hand[] = {TD(LT_MOUSE_STAB), GUI_T(KC_ESC), COMBO_END};
 
 /* -- */
 const uint16_t PROGMEM combo_cap_word[] = {LT(_NUMERIC, KC_DOT), KC_T, COMBO_END};
@@ -122,11 +122,11 @@ const uint16_t PROGMEM combo_a_grave[] = {CTL_T(KC_SPACE), KC_A, COMBO_END};
 const uint16_t PROGMEM combo_e_grave[] = {CTL_T(KC_SPACE), KC_E, COMBO_END};
 const uint16_t PROGMEM combo_u_grave[] = {CTL_T(KC_SPACE), KC_U, COMBO_END};
 
-const uint16_t PROGMEM combo_a_circumflex[] = {LT(_MOUSE, S(KC_TAB)), KC_A, COMBO_END};
-const uint16_t PROGMEM combo_e_circumflex[] = {LT(_MOUSE, S(KC_TAB)), KC_E, COMBO_END};
-const uint16_t PROGMEM combo_i_circumflex[] = {LT(_MOUSE, S(KC_TAB)), KC_I, COMBO_END};
-const uint16_t PROGMEM combo_o_circumflex[] = {LT(_MOUSE, S(KC_TAB)), KC_O, COMBO_END};
-const uint16_t PROGMEM combo_u_circumflex[] = {LT(_MOUSE, S(KC_TAB)), KC_U, COMBO_END};
+const uint16_t PROGMEM combo_a_circumflex[] = {TD(LT_MOUSE_STAB), KC_A, COMBO_END};
+const uint16_t PROGMEM combo_e_circumflex[] = {TD(LT_MOUSE_STAB), KC_E, COMBO_END};
+const uint16_t PROGMEM combo_i_circumflex[] = {TD(LT_MOUSE_STAB), KC_I, COMBO_END};
+const uint16_t PROGMEM combo_o_circumflex[] = {TD(LT_MOUSE_STAB), KC_O, COMBO_END};
+const uint16_t PROGMEM combo_u_circumflex[] = {TD(LT_MOUSE_STAB), KC_U, COMBO_END};
 
 const uint16_t PROGMEM combo_e_diaeresis[] = {ALT_T(KC_TAB), KC_E, COMBO_END};
 const uint16_t PROGMEM combo_i_diaeresis[] = {ALT_T(KC_TAB), KC_I, COMBO_END};

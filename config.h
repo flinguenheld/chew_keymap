@@ -1,4 +1,4 @@
-/* Copyright 2023 Florent Linguenheld (@FLinguenheld)
+/* Copyright 2024 Florent Linguenheld (@FLinguenheld)
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -16,19 +16,12 @@
 
 #pragma once
 
+#define EE_HANDS
+#define SERIAL_USART_TX_PIN GP0
+
 /* Flash */
 #define RP2040_BOOTLOADER_DOUBLE_TAP_RESET              // Activates the double-tap behavior
 #define RP2040_BOOTLOADER_DOUBLE_TAP_RESET_TIMEOUT 200U // In ms in which the double tap can occur
-
-/* OLED */
-#undef OLED_FONT_H
-#define OLED_FONT_H "./oled/glcdfont.c"
-
-#define OLED_TIMEOUT 25000
-#define OLED_BRIGHTNESS 50 // Protect my eyesss
-#define SPLIT_LAYER_STATE_ENABLE
-#define SPLIT_MODS_ENABLE
-#define SPLIT_OLED_ENABLE
 
 /* Auto shift ♥ */
 #define AUTO_SHIFT_TIMEOUT 115

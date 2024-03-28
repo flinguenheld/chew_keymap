@@ -1,4 +1,4 @@
-// Copyright 2023 Florent Linguenheld (@FLinguenheld)
+// Copyright 2024 Florent Linguenheld (@FLinguenheld)
 // SPDX-License-Identifier: GPL-2.0-or-later
 
 #include QMK_KEYBOARD_H
@@ -8,8 +8,8 @@
    Exceptions like Tab or Enter */
 bool get_auto_shifted_key(uint16_t keycode, keyrecord_t *record) {
   switch (keycode) {
-  case KC_TAB:
-    // case KC_ENT:
+  // case KC_TAB:
+  case KC_ENT:
 
   case US_EACU:
   case US_CCED:

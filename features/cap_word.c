@@ -1,4 +1,4 @@
-// Copyright 2023 Florent Linguenheld (@FLinguenheld)
+// Copyright 2024 Florent Linguenheld (@FLinguenheld)
 // SPDX-License-Identifier: GPL-2.0-or-later
 
 #include QMK_KEYBOARD_H

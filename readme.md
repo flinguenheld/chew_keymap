@@ -1,26 +1,21 @@
-# TEMPORARY NAME
-
-# NOT ACCURATE
+# CHEW KEYMAP
 
 ### Custom // keymap
 
-This keymap is inspired by [optimot](https://optimot.fr) which is a French layout.\
-Nonetheless it uses the US international extended keymap for French keys.
-
+French layout based on the US international extended keymap.
 It uses the _best_ qmk features :
 
 - combos ♥
 - auto shift
 - leader
 
-I tried to optimise key positions for neovim and i3wm while limit digrams.\
-The oled screens are used to display the current layout, the modifier keys and the leader key.
+I tried to optimise key positions for helix and hyprland while limit digrams.\
 
 #### Install
 
 Clone this repo in the folder :
 
-    ~/qmk_firmware/keyboards/----/keymaps/
+    ~/qmk_firmware/keyboards/chew/keymaps/
 
 #### Compile and flash
 
@@ -35,7 +30,7 @@ and :
 
 #### Layout
 
-Set the us altgr international to activate French keys :
+Set the us altgr international to activate French keys (with X11) :
 
     /usr/share/X11/xkb/symbols/
     localectl list-x11-keymap-variants us

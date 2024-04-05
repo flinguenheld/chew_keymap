@@ -25,7 +25,7 @@
 
 /* Auto shift ♥ */
 #define AUTO_SHIFT_TIMEOUT 115
-#define TAPPING_TERM 145
+#define TAPPING_TERM 115
 // #define TAPPING_TERM 155
 
 /* Unicode */

@@ -17,6 +17,8 @@
 enum combos {
   LEADER,
   BOOTLOADER,
+  TAB,
+  STAB,
 
   LAYER_ADJ,
   LAYER_FN,
@@ -106,12 +108,14 @@ enum combos {
 uint16_t COMBO_LEN = COMBO_LENGTH;
 
 /* Sequences fo keys */
-const uint16_t PROGMEM combo_leader[] = {CTL_T(KC_SPACE), LT(_NUMERIC, KC_DOT), COMBO_END};
-const uint16_t PROGMEM combo_bootloader[] = {KC_BSPC, KC_K, KC_J, KC_V, COMBO_END};
+const uint16_t PROGMEM combo_leader[] = {LT(_NUMERIC, KC_DOT), KC_L, COMBO_END};
+const uint16_t PROGMEM combo_bootloader[] = {KC_BSPC, KC_Z, KC_J, KC_V, COMBO_END};
+const uint16_t PROGMEM combo_tab[] = {CTL_T(KC_SPACE), KC_W, COMBO_END};
+const uint16_t PROGMEM combo_stab[] = {CTL_T(KC_SPACE), KC_B, COMBO_END};
 
-const uint16_t PROGMEM combo_adj[] = {TD(LT_MOUSE_STAB), LT(_ARROWS, KC_COMM), COMBO_END};
+const uint16_t PROGMEM combo_adj[] = {TD(LT_MOUSE_LEADER), LT(_ARROWS, KC_COMM), COMBO_END};
 const uint16_t PROGMEM combo_fn[] = {LT(_NUMERIC, KC_DOT), KC_N, COMBO_END};
-const uint16_t PROGMEM combo_left_hand[] = {TD(LT_MOUSE_STAB), GUI_T(KC_ESC), COMBO_END};
+const uint16_t PROGMEM combo_left_hand[] = {TD(LT_MOUSE_LEADER), GUI_T(KC_ESC), COMBO_END};
 
 /* -- */
 const uint16_t PROGMEM combo_cap_word[] = {LT(_NUMERIC, KC_DOT), KC_T, COMBO_END};
@@ -122,22 +126,22 @@ const uint16_t PROGMEM combo_a_grave[] = {CTL_T(KC_SPACE), KC_A, COMBO_END};
 const uint16_t PROGMEM combo_e_grave[] = {CTL_T(KC_SPACE), KC_E, COMBO_END};
 const uint16_t PROGMEM combo_u_grave[] = {CTL_T(KC_SPACE), KC_U, COMBO_END};
 
-const uint16_t PROGMEM combo_a_circumflex[] = {TD(LT_MOUSE_STAB), KC_A, COMBO_END};
-const uint16_t PROGMEM combo_e_circumflex[] = {TD(LT_MOUSE_STAB), KC_E, COMBO_END};
-const uint16_t PROGMEM combo_i_circumflex[] = {TD(LT_MOUSE_STAB), KC_I, COMBO_END};
-const uint16_t PROGMEM combo_o_circumflex[] = {TD(LT_MOUSE_STAB), KC_O, COMBO_END};
-const uint16_t PROGMEM combo_u_circumflex[] = {TD(LT_MOUSE_STAB), KC_U, COMBO_END};
+const uint16_t PROGMEM combo_a_circumflex[] = {TD(LT_MOUSE_LEADER), KC_A, COMBO_END};
+const uint16_t PROGMEM combo_e_circumflex[] = {TD(LT_MOUSE_LEADER), KC_E, COMBO_END};
+const uint16_t PROGMEM combo_i_circumflex[] = {TD(LT_MOUSE_LEADER), KC_I, COMBO_END};
+const uint16_t PROGMEM combo_o_circumflex[] = {TD(LT_MOUSE_LEADER), KC_O, COMBO_END};
+const uint16_t PROGMEM combo_u_circumflex[] = {TD(LT_MOUSE_LEADER), KC_U, COMBO_END};
 
-const uint16_t PROGMEM combo_e_diaeresis[] = {ALT_T(KC_TAB), KC_E, COMBO_END};
-const uint16_t PROGMEM combo_i_diaeresis[] = {ALT_T(KC_TAB), KC_I, COMBO_END};
-const uint16_t PROGMEM combo_u_diaeresis[] = {ALT_T(KC_TAB), KC_U, COMBO_END};
-const uint16_t PROGMEM combo_y_diaeresis[] = {ALT_T(KC_TAB), KC_Y, COMBO_END};
+const uint16_t PROGMEM combo_e_diaeresis[] = {ALT_T(QK_REP), KC_E, COMBO_END};
+const uint16_t PROGMEM combo_i_diaeresis[] = {ALT_T(QK_REP), KC_I, COMBO_END};
+const uint16_t PROGMEM combo_u_diaeresis[] = {ALT_T(QK_REP), KC_U, COMBO_END};
+const uint16_t PROGMEM combo_y_diaeresis[] = {ALT_T(QK_REP), KC_Y, COMBO_END};
 
 const uint16_t PROGMEM combo_e_acute[] = {KC_E, KC_O, COMBO_END};
 const uint16_t PROGMEM combo_e_acute_test[] = {CTL_T(KC_SPACE), KC_O, COMBO_END};
-const uint16_t PROGMEM combo_c_cedilla[] = {LT(_NUMERIC, KC_DOT), KC_C, COMBO_END};
-const uint16_t PROGMEM combo_oe[] = {ALT_T(KC_TAB), KC_O, COMBO_END};
-const uint16_t PROGMEM combo_ae[] = {ALT_T(KC_TAB), KC_A, COMBO_END};
+const uint16_t PROGMEM combo_c_cedilla[] = {LT(_ARROWS, KC_COMMA), KC_C, COMBO_END};
+const uint16_t PROGMEM combo_oe[] = {ALT_T(QK_REP), KC_O, COMBO_END};
+const uint16_t PROGMEM combo_ae[] = {ALT_T(QK_REP), KC_A, COMBO_END};
 
 const uint16_t PROGMEM combo_euro[] = {KC_X, KC_Q, COMBO_END};
 
@@ -187,14 +191,16 @@ const uint16_t PROGMEM combo_parenthesis_leftright[] = {KC_P, KC_L, COMBO_END};
 const uint16_t PROGMEM combo_control_right[] = {LT(_NUMERIC, KC_DOT), KC_R, COMBO_END};
 const uint16_t PROGMEM combo_control_shift_right[] = {LT(_NUMERIC, KC_DOT), KC_S, COMBO_END};
 
-const uint16_t PROGMEM combo_shift_left[] = {CTL_T(KC_SPACE), ALT_T(KC_TAB), COMBO_END};
+const uint16_t PROGMEM combo_shift_left[] = {CTL_T(KC_SPACE), ALT_T(QK_REP), COMBO_END};
 const uint16_t PROGMEM combo_ctrl_shift_left[] = {CTL_T(KC_SPACE), GUI_T(KC_ESC), COMBO_END};
-const uint16_t PROGMEM combo_alt_shift_left[] = {ALT_T(KC_TAB), GUI_T(KC_ESC), COMBO_END};
+const uint16_t PROGMEM combo_alt_shift_left[] = {ALT_T(QK_REP), GUI_T(KC_ESC), COMBO_END};
 
 /* Sequences fo keys */
 combo_t key_combos[] = {
     [LEADER] = COMBO(combo_leader, QK_LEAD),
     [BOOTLOADER] = COMBO(combo_bootloader, QK_BOOTLOADER),
+    [TAB] = COMBO(combo_tab, KC_TAB),
+    [STAB] = COMBO(combo_stab, S(KC_TAB)),
 
     [LAYER_ADJ] = COMBO(combo_adj, OSL(_ADJ)),
     [LAYER_FN] = COMBO(combo_fn, OSL(_FN)),

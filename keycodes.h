@@ -36,5 +36,5 @@ enum custom_keys {
 
 // Tap Dance keycodes
 enum td_keycodes {
-    LT_MOUSE_STAB
+    LT_MOUSE_LEADER,
 };

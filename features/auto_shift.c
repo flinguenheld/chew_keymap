@@ -63,7 +63,9 @@ bool get_custom_auto_shifted_key(uint16_t keycode, keyrecord_t *record) {
   case KC_BACKSLASH:
   case KC_CIRCUMFLEX:
   case KC_COLON:
+  case KC_COMMA:
   case KC_DOLLAR:
+  case KC_DOT:
   case KC_EQUAL:
   case KC_EXCLAIM:
   case KC_GRAVE:
@@ -164,12 +166,28 @@ void autoshift_press_user(uint16_t keycode, bool shifted, keyrecord_t *record) {
       tap_code16(KC_COLON);
     }
     break;
+  case KC_COMMA:
+    if (shifted) {
+      tap_code16(KC_COMMA);
+      tap_code16(KC_COMMA);
+    } else {
+      tap_code16(KC_COMMA);
+    }
+    break;
   case KC_DOLLAR:
     if (shifted) {
       tap_code16(KC_DOLLAR);
       tap_code16(KC_DOLLAR);
     } else {
       tap_code16(KC_DOLLAR);
+    }
+    break;
+  case KC_DOT:
+    if (shifted) {
+      tap_code16(KC_DOT);
+      tap_code16(KC_DOT);
+    } else {
+      tap_code16(KC_DOT);
     }
     break;
   case KC_EQUAL:

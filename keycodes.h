@@ -11,7 +11,6 @@ enum custom_layers {
   _MOUSE,
   _ADJ,
   _FN,
-  _LEFT_HAND,
 };
 
 enum custom_keys {

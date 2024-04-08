@@ -1,6 +1,8 @@
 # CHEW KEYMAP
 
-French layout based on the US international extended keymap.
+This keymap is inspired by [Ergo-L](https://ergol.org/) which is a French layout.
+Nonetheless it uses the US international extended keymap for French keys.
+
 It uses the _best_ qmk features :
 
 - combos ♥

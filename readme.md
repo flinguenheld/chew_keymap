@@ -1,48 +1,36 @@
-# CHEW KEYMAP
+## CHEW KEYMAP
 
-This keymap is inspired by [Ergo-L](https://ergol.org/) which is a French layout.
-Nonetheless it uses the US international extended keymap for French keys.
 
-It uses the _best_ qmk features :
+<div align="center">
+    <img src="./images/squirrel.png">
+</div>
 
-- combos ♥
+This keymap has been made for the [chew](https://github.com/flinguenheld/chew) keyboard.  
+It is inspired by [Ergo-L](https://ergol.org/) which is a French layout.  
+Nonetheless it uses the [US international extended](https://github.com/qmk/qmk_firmware/blob/master/quantum/keymap_extras/keymap_us_extended.h) keymap for French keys.  
+
+It makes use of the _best_ qmk features :
+- combos ❤️
 - auto shift
 - leader key
 
-I tried to optimise key positions for helix and hyprland while limit digrams.\
-
-#### Install
+### Install
 
 Clone this repo in the folder :
 
     ~/qmk_firmware/keyboards/chew/keymaps/
 
-#### Compile and flash
-
-Navigate into the keymap folder and launch this command for both sides :
+Then :
 
     qmk compile && qmk flash
 
-and :
+Finally press twice the *reset* button, the controller should appear in your file explorer.  
 
-    Click twice on the flash button and use thunar for instance to clic on the keyboard.
-    Don't forget to flash with the double tap bootloader define before soldering.
+Check the [Chew wiki](https://github.com/flinguenheld/chew/wiki) for more information.
 
-#### Layout
+---
 
-Set the us altgr international to activate French keys (with X11) :
-
-    /usr/share/X11/xkb/symbols/
-    localectl list-x11-keymap-variants us
-
-    setxkbmap us altgr-intl
-
-#### Inspiration
-
-[ferris sweep](https://github.com/davidphilipbarr/Sweep)\
-[wubbo](https://github.com/cacheworks/Wubbo)
-
-#### Layouts
+### Layouts
 
 <div align="center">
     <img src="./images/layouts.png">
@@ -50,7 +38,7 @@ Set the us altgr international to activate French keys (with X11) :
     <img src="./images/combos.png">
 </div>
 
-#### Leader
+### Leader
 
 | ------------------ | -------- | ------------------ | -------- | ------------------ | -------- |
 | :----------------: | :------- | :----------------: | :------- | :----------------: | :------- |

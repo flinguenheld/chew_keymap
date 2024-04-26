@@ -16,20 +16,11 @@
 
 #pragma once
 
-#define EE_HANDS
-#define SERIAL_USART_TX_PIN GP0
-
-/* Flash */
-#define RP2040_BOOTLOADER_DOUBLE_TAP_RESET              // Activates the double-tap behavior
-#define RP2040_BOOTLOADER_DOUBLE_TAP_RESET_TIMEOUT 200U // In ms in which the double tap can occur
-
 /* Auto shift ♥ */
 #define AUTO_SHIFT_TIMEOUT 115
-#define TAPPING_TERM 135
-// #define TAPPING_TERM 155
+#define TAPPING_TERM 145
 
 /* Unicode */
-// #define UNICODE_SELECTED_MODES UC_LNX
 #define UNICODE_SELECTED_MODES UNICODE_MODE_LINUX
 
 /* Leader */

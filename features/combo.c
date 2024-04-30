@@ -115,7 +115,7 @@ const uint16_t PROGMEM combo_tab[] = {CTL_T(KC_SPACE), KC_W, COMBO_END};
 const uint16_t PROGMEM combo_stab[] = {CTL_T(KC_SPACE), KC_B, COMBO_END};
 
 const uint16_t PROGMEM combo_adj[] = {MO(_MOUSE), MO(_ARROWS), COMBO_END};
-const uint16_t PROGMEM combo_fn[] = {MO(_NUMERIC), KC_F, COMBO_END};
+const uint16_t PROGMEM combo_fn[] = {MO(_NUMERIC), KC_W, COMBO_END};
 
 /* -- */
 const uint16_t PROGMEM combo_cap_word[] = {MO(_ARROWS), KC_W, COMBO_END};

@@ -1,18 +1,19 @@
-## CHEW KEYMAP
-
-
 <div align="center">
     <img src="./images/squirrel.png">
 </div>
 
-This keymap has been made for the [chew](https://github.com/flinguenheld/chew) keyboard.  
+This keymap has been made for the [Chew](https://github.com/flinguenheld/chew) keyboard.  
 It is inspired by [Ergo-L](https://ergol.org/) which is a French layout.  
-Nonetheless it uses the [US international extended](https://github.com/qmk/qmk_firmware/blob/master/quantum/keymap_extras/keymap_us_extended.h) keymap for French keys.  
+Nonetheless it uses the [US international extended](https://github.com/qmk/qmk_firmware/blob/master/quantum/keymap_extras/keymap_us_extended.h) keymap for all French keys.  
 
-It makes use of the _best_ qmk features :
+It makes use of the _best_ [QMK](https://docs.qmk.fm/#/) features :
 - combos ❤️
 - auto shift
 - leader key
+
+<div align="center">
+    <img src="https://github.com/flinguenheld/chew/raw/main/images/hazelnuts.png?raw=true">
+</div>
 
 ### Install
 
@@ -20,22 +21,29 @@ Clone this repo in the folder :
 
     ~/qmk_firmware/keyboards/chew/keymaps/
 
-Then :
+Move inside the folder and use this command :
 
     qmk compile && qmk flash
 
 Finally press twice the *reset* button, the controller should appear in your file explorer.  
 
-Check the [Chew wiki](https://github.com/flinguenheld/chew/wiki) for more information.
+You can read the [Chew wiki](https://github.com/flinguenheld/chew/wiki) for more information.  
 
----
+
+<div align="center">
+    <img src="https://github.com/flinguenheld/chew/raw/main/images/carrots.png?raw=true">
+</div>
 
 ### Layouts
 
 <div align="center">
     <img src="./images/layouts.png">
-    <hr>
+    <img src="https://github.com/flinguenheld/chew/raw/main/images/carrots.png?raw=true">
+</div>
+
+<div align="center">
     <img src="./images/combos.png">
+    <img src="https://github.com/flinguenheld/chew/raw/main/images/hazelnuts.png?raw=true">
 </div>
 
 ### Leader

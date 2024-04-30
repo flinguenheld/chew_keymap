@@ -31,6 +31,13 @@
 /* Cap word */
 #define CAPS_WORD_IDLE_TIMEOUT 5000
 
+/* LEDs */
+#define WS2812_BYTE_ORDER WS2812_BYTE_ORDER_HSV
+#define WS2812_DI_PIN 16
+#define RGBLIGHT_LED_COUNT 2
+#define RGBLED_SPLIT { 1, 1 }
+#define RGBLIGHT_LIMIT_VAL 10
+
 /* Mouse */
 #define MK_3_SPEED
 #define MK_MOMENTARY_ACCEL

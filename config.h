@@ -16,9 +16,22 @@
 
 #pragma once
 
+/* VBus */
+#undef EE_HANDS
+#undef SPLIT_USB_DETECT
+// On the left --
+#define USB_VBUS_PIN GP10
+#define SPLIT_HAND_PIN GP10
+// Or on the right --
+// #define USB_VBUS_PIN GP12
+// #define SPLIT_HAND_PIN GP12
+
+// Without VBus, if boot fail on cold start, increase this value (default 2000)
+// #define SPLIT_USB_TIMEOUT 8000
+
 /* Auto shift ♥ */
-#define AUTO_SHIFT_TIMEOUT 115
-#define TAPPING_TERM 145
+#define AUTO_SHIFT_TIMEOUT 105
+#define TAPPING_TERM 105
 
 /* Unicode */
 #define UNICODE_SELECTED_MODES UNICODE_MODE_LINUX

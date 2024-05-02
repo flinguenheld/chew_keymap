@@ -161,45 +161,45 @@ void leader_end_user(void) {
     send_unicode_string("❕");
 
     /* Subscript / superscript */
-  } else if (leader_sequence_three_keys(KC_U, KC_P, KC_N)) {
+  } else if (leader_sequence_two_keys(KC_U, KC_U)) {
     send_unicode_string("⁰");
-  } else if (leader_sequence_three_keys(KC_D, KC_N, KC_N)) {
+  } else if (leader_sequence_two_keys(KC_D, KC_U)) {
     send_unicode_string("₀");
-  } else if (leader_sequence_three_keys(KC_U, KC_P, KC_C)) {
+  } else if (leader_sequence_two_keys(KC_U, KC_H)) {
     tap_code16(US_SUP1); // ¹
-  } else if (leader_sequence_three_keys(KC_D, KC_N, KC_C)) {
+  } else if (leader_sequence_two_keys(KC_D, KC_H)) {
     send_unicode_string("₁");
-  } else if (leader_sequence_three_keys(KC_U, KC_P, KC_G)) {
+  } else if (leader_sequence_two_keys(KC_U, KC_G)) {
     tap_code16(US_SUP2); // ²
-  } else if (leader_sequence_three_keys(KC_D, KC_N, KC_G)) {
+  } else if (leader_sequence_two_keys(KC_D, KC_G)) {
     send_unicode_string("₂");
-  } else if (leader_sequence_three_keys(KC_U, KC_P, KC_H)) {
+  } else if (leader_sequence_two_keys(KC_U, KC_J)) {
     tap_code16(US_SUP3); // ³
-  } else if (leader_sequence_three_keys(KC_D, KC_N, KC_H)) {
+  } else if (leader_sequence_two_keys(KC_D, KC_J)) {
     send_unicode_string("₃");
-  } else if (leader_sequence_three_keys(KC_U, KC_P, KC_T)) {
+  } else if (leader_sequence_two_keys(KC_U, KC_R)) {
     send_unicode_string("⁴");
-  } else if (leader_sequence_three_keys(KC_D, KC_N, KC_T)) {
+  } else if (leader_sequence_two_keys(KC_D, KC_R)) {
     send_unicode_string("₄");
-  } else if (leader_sequence_three_keys(KC_U, KC_P, KC_S)) {
+  } else if (leader_sequence_two_keys(KC_U, KC_T)) {
     send_unicode_string("⁵");
-  } else if (leader_sequence_three_keys(KC_D, KC_N, KC_S)) {
+  } else if (leader_sequence_two_keys(KC_D, KC_T)) {
     send_unicode_string("₅");
-  } else if (leader_sequence_three_keys(KC_U, KC_P, KC_R)) {
+  } else if (leader_sequence_two_keys(KC_U, KC_I)) {
     send_unicode_string("⁶");
-  } else if (leader_sequence_three_keys(KC_D, KC_N, KC_R)) {
+  } else if (leader_sequence_two_keys(KC_D, KC_I)) {
     send_unicode_string("₆");
-  } else if (leader_sequence_three_keys(KC_U, KC_P, KC_P)) {
+  } else if (leader_sequence_two_keys(KC_U, KC_M)) {
     send_unicode_string("⁷");
-  } else if (leader_sequence_three_keys(KC_D, KC_N, KC_P)) {
+  } else if (leader_sequence_two_keys(KC_D, KC_M)) {
     send_unicode_string("₇");
-  } else if (leader_sequence_three_keys(KC_U, KC_P, KC_D)) {
+  } else if (leader_sequence_two_keys(KC_U, KC_D)) {
     send_unicode_string("⁸");
-  } else if (leader_sequence_three_keys(KC_D, KC_N, KC_D)) {
+  } else if (leader_sequence_two_keys(KC_D, KC_D)) {
     send_unicode_string("₈");
-  } else if (leader_sequence_three_keys(KC_U, KC_P, KC_L)) {
+  } else if (leader_sequence_two_keys(KC_U, KC_Y)) {
     send_unicode_string("⁹");
-  } else if (leader_sequence_three_keys(KC_D, KC_N, KC_L)) {
+  } else if (leader_sequence_two_keys(KC_D, KC_Y)) {
     send_unicode_string("₉");
   };
 }

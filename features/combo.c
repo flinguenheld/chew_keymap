@@ -51,6 +51,9 @@ enum combos {
 
   EURO,
 
+  FRENCH_QUOTE_LEFT,
+  FRENCH_QUOTE_RIGHT,
+
   /* -- */
   AMPERSAND,
   AT_SIGN,
@@ -145,6 +148,9 @@ const uint16_t PROGMEM combo_ae[] = {ALT_T(QK_REP), KC_A, COMBO_END};
 
 const uint16_t PROGMEM combo_euro[] = {KC_E, KC_P, COMBO_END};
 
+const uint16_t PROGMEM combo_french_quote_left[] = {KC_A, KC_F, COMBO_END};
+const uint16_t PROGMEM combo_french_quote_right[] = {KC_L, KC_U, COMBO_END};
+
 /* -- */
 const uint16_t PROGMEM combo_ampersand[] = {KC_E, KC_N, COMBO_END};
 const uint16_t PROGMEM combo_at_sign[] = {KC_Q, KC_N, COMBO_END};
@@ -234,6 +240,9 @@ combo_t key_combos[] = {
     [AE] = COMBO(combo_ae, US_AE),
 
     [EURO] COMBO(combo_euro, US_EURO),
+
+    [FRENCH_QUOTE_LEFT] COMBO(combo_french_quote_left, US_LDAQ),
+    [FRENCH_QUOTE_RIGHT] COMBO(combo_french_quote_right, US_RDAQ),
 
     /* -- */
     [AMPERSAND] = COMBO(combo_ampersand, KC_AMPERSAND),

@@ -1,18 +1,45 @@
 // Copyright 2024 Florent Linguenheld (@FLinguenheld)
 // SPDX-License-Identifier: GPL-2.0-or-later
 
+#include <stdint.h>
 #include QMK_KEYBOARD_H
 
+int cycles = 4;
 int nb = 0;
+char up = 0;
+uint8_t h = 170;
 
 void keyboard_post_init_user(void) {
-    rgblight_sethsv(HSV_GREEN);
+    rgblight_sethsv(0, 255, 100);  // RED -> Error if still on
 }
 
 void housekeeping_task_user(void) {
 
-    if (nb < 15000) {
+    if (cycles > 0)
+    {
         nb++;
+        if (nb % 5 == 0)
+        {
+            if (up == 1 ) {
+                h++;
+
+                if (h >= 170)
+                {
+                    up = 0;
+                    cycles--;
+                }
+            }
+            else {
+                h--;
+
+                if (h <= 50)
+                    up = 1;
+            }
+        }
+
+
+        rgblight_sethsv(h, 255, 255);
+
     } else {
 
         bool active = false;
@@ -34,7 +61,7 @@ void housekeeping_task_user(void) {
             break;
 
             case _FN:;
-                rgblight_sethsv(HSV_RED);
+                rgblight_sethsv(HSV_ORANGE);
                 active = true;
             break;
         }

@@ -18,7 +18,7 @@ void leader_end_user(void) {
   } else if (leader_sequence_three_keys(KC_H, KC_U, KC_B)) {
     SEND_STRING("https://github.com/flinguenheld/");
   } else if (leader_sequence_three_keys(KC_Q, KC_M, KC_K)) {
-    SEND_STRING("$HOME/qmk_firmware/keyboards/splitkb/aurora/sweep/keymaps/sweep_keymap");
+    SEND_STRING("$HOME/qmk_firmware/keyboards/chew/keymaps/chew_keymap");
   } else if (leader_sequence_three_keys(KC_Q, KC_M, KC_C)) {
     SEND_STRING("qmk compile && qmk flash");
 
@@ -31,37 +31,6 @@ void leader_end_user(void) {
     SEND_STRING("setxkbmap us altgr-intl");
   } else if (leader_sequence_one_key(KC_C)) {
     SEND_STRING(" | wl-copy --trim-newline");
-
-    /* Keyring requests, improbable combinaisons used by i3 */
-  } else if (leader_sequence_three_keys(KC_G, KC_I, KC_T)) {
-    register_code(KC_LEFT_GUI);
-    register_code(KC_LEFT_SHIFT);
-    register_code(KC_LEFT_CTRL);
-    register_code(KC_0);
-    unregister_code(KC_0);
-    unregister_code(KC_LEFT_GUI);
-    unregister_code(KC_LEFT_SHIFT);
-    unregister_code(KC_LEFT_CTRL);
-
-  } else if (leader_sequence_three_keys(KC_M, KC_A, KC_I)) {
-    register_code(KC_LEFT_GUI);
-    register_code(KC_LEFT_SHIFT);
-    register_code(KC_LEFT_CTRL);
-    register_code(KC_1);
-    unregister_code(KC_1);
-    unregister_code(KC_LEFT_GUI);
-    unregister_code(KC_LEFT_SHIFT);
-    unregister_code(KC_LEFT_CTRL);
-
-  } else if (leader_sequence_three_keys(KC_P, KC_A, KC_S)) {
-    register_code(KC_LEFT_GUI);
-    register_code(KC_LEFT_SHIFT);
-    register_code(KC_LEFT_CTRL);
-    register_code(KC_2);
-    unregister_code(KC_2);
-    unregister_code(KC_LEFT_GUI);
-    unregister_code(KC_LEFT_SHIFT);
-    unregister_code(KC_LEFT_CTRL);
 
     /* ----- */
   } else if (leader_sequence_three_keys(KC_D, KC_E, KC_G)) {

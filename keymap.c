@@ -18,6 +18,26 @@
 #include "keycodes.h"
 
 
+bool process_record_user(uint16_t keycode, keyrecord_t *record) {
+    switch (keycode) {
+
+           case UNICODE:
+      if (record->event.pressed) {
+
+        register_code(KC_LEFT_SHIFT);
+        register_code(KC_LEFT_CTRL);
+        register_code(KC_U);
+
+        unregister_code(KC_U);
+        unregister_code(KC_LEFT_SHIFT);
+        unregister_code(KC_LEFT_CTRL);
+        
+      } else {
+          
+      }     break;
+    }
+    return true;
+}
 
 
 // clang-format off
@@ -31,22 +51,22 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     //|---------------+--------+--------+--------+--------|       |---------+--------+--------+--------+--------|
             KC_Z      ,  KC_X  ,  KC_Q  ,  KC_B  ,                             KC_H  ,  KC_G  ,  KC_J  ,  KC_K  ,
     //|---------------+--------+--------+--------|                          |--------+--------+--------+--------|
-    //       |------------+-----------------+---------------|   |--------+--------------+-------------!
-               MO(_MOUSE) , CTL_T(KC_SPACE) , ALT_T(QK_REP) ,     KC_ENT , MO(_NUMERIC) , MO(_ARROWS)
-    //       |------------+-----------------+---------------|   |--------+--------------+-------------!
+    //             |------------+-----------------+---------|   |--------+--------------+-------------!
+                     MO(_MOUSE) , CTL_T(KC_SPACE) , KC_LALT ,     KC_ENT , MO(_NUMERIC) , MO(_ARROWS)
+    //             |------------+-----------------+---------|   |--------+--------------+-------------!
     ),
 
     [_NUMERIC] = LAYOUT(
     //|---------+---------+---------+---------+---------|       |---------+--------+--------+--------+---------|
-        _______ , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX ,         _______ ,  KC_7  ,  KC_8  ,  KC_9  , KC_DOT  ,
+        _______ , XXXXXXX , XXXXXXX , US_PND  , XXXXXXX ,         _______ ,  KC_7  ,  KC_8  ,  KC_9  , KC_DOT  ,
     //|---------+---------+---------+---------+---------|       |---------+--------+--------+--------+---------|
-        XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX ,         XXXXXXX ,  KC_4  ,  KC_5  ,  KC_6  ,  KC_0   ,
+        XXXXXXX , XXXXXXX , US_EURO , XXXXXXX , XXXXXXX ,         XXXXXXX ,  KC_4  ,  KC_5  ,  KC_6  ,  KC_0   ,
     //|---------+---------+---------+---------+---------|       |---------+--------+--------+--------+---------|
         XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX ,                              KC_1  ,  KC_2  ,  KC_3  , KC_COMM ,
     //|---------+---------+---------+---------|                           |--------+--------+--------+---------|
-    //                      |---------+---------+---------|   |---------+---------+---------!
-                              XXXXXXX , _______ , UNICODE ,     XXXXXXX , XXXXXXX , XXXXXXX
-    //                      |---------+---------+---------|   |---------+---------+---------!
+    //                |------------+------------+---------|   |---------+---------+---------!
+                        UC(0x30C4) , UC(0x00A0) , UNICODE ,     XXXXXXX , XXXXXXX , XXXXXXX
+    //                |------------+------------+---------|   |---------+---------+---------!
     ),
 
     [_FN] = LAYOUT(

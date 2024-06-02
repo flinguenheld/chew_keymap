@@ -32,6 +32,7 @@ enum custom_keys {
   CS_U_DIAERESIS,
   CS_Y_DIAERESIS,
 
+  CS_QU,
 };
 
 // Tap Dance keycodes

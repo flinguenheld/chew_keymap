@@ -50,7 +50,7 @@ void housekeeping_task_user(void) {
         }
 
         if (is_caps_word_on()) {
-            rgblight_sethsv(HSV_MAGENTA);
+            rgblight_sethsv(HSV_TEAL);
             active = true;
         }
 
@@ -68,7 +68,7 @@ void housekeeping_task_user(void) {
 
         led_t led_state = host_keyboard_led_state();
         if (led_state.caps_lock) {
-            rgblight_sethsv(HSV_AZURE);
+            rgblight_sethsv(HSV_MAGENTA);
             active = true;
         }
 

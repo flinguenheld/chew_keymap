@@ -108,6 +108,8 @@ bool get_custom_auto_shifted_key(uint16_t keycode, keyrecord_t *record) {
   case CS_I_DIAERESIS:
   case CS_U_DIAERESIS:
   case CS_Y_DIAERESIS:
+
+  case CS_QU:
     return true;
 
   default:
@@ -495,6 +497,16 @@ void autoshift_press_user(uint16_t keycode, bool shifted, keyrecord_t *record) {
     } else {
       tap_code16(US_DIAE);
       tap_code16(KC_Y);
+    }
+    break;
+
+  case CS_QU:
+    if (shifted) {
+      tap_code16(S(KC_Q));
+      tap_code16(S(KC_U));
+    } else {
+      tap_code16(KC_Q);
+      tap_code16(KC_U);
     }
     break;
 

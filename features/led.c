@@ -4,10 +4,10 @@
 #include <stdint.h>
 #include QMK_KEYBOARD_H
 
-int cycles = 4;
-int nb = 0;
-char up = 0;
-uint8_t h = 170;
+int startup_led_cycles = 4;
+int nb_qmk_cycles = 0;
+char up_down = 0;
+uint8_t h = 170;  // HSV value
 
 void keyboard_post_init_user(void) {
     rgblight_sethsv(0, 255, 100);  // RED -> Error if still on
@@ -15,25 +15,29 @@ void keyboard_post_init_user(void) {
 
 void housekeeping_task_user(void) {
 
-    if (cycles > 0)
+    if (startup_led_cycles > 0)
     {
-        nb++;
-        if (nb % 5 == 0)
+        nb_qmk_cycles++;
+#ifdef SPLIT 
+        if (nb_qmk_cycles % 5 == 0)
+#else
+        if (nb_qmk_cycles % 14 == 0)
+#endif
         {
-            if (up == 1 ) {
+            if (up_down == 1 ) {
                 h++;
 
                 if (h >= 170)
                 {
-                    up = 0;
-                    cycles--;
+                    up_down = 0;
+                    startup_led_cycles--;
                 }
             }
             else {
                 h--;
 
                 if (h <= 50)
-                    up = 1;
+                    up_down = 1;
             }
         }
 

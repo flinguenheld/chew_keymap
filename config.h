@@ -16,8 +16,8 @@
 
 #pragma once
 
-// #define SPLIT
-// #define VBUS
+#define SPLIT
+#define VBUS
 
 #ifdef SPLIT
 

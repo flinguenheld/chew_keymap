@@ -8,7 +8,7 @@
    Exceptions like Tab or Enter */
 bool get_auto_shifted_key(uint16_t keycode, keyrecord_t *record) {
   switch (keycode) {
-  case KC_TAB:
+  // case KC_TAB:
   case KC_ENT:
 
   case US_EACU:
@@ -55,7 +55,7 @@ bool get_auto_shifted_key(uint16_t keycode, keyrecord_t *record) {
    Add here the letter or the custom enum, then add in press_user and press_release the actions */
 bool get_custom_auto_shifted_key(uint16_t keycode, keyrecord_t *record) {
   switch (keycode) {
-  case KC_BSPC:
+  // case KC_BSPC:
 
   // Double them !!!
   case KC_AMPERSAND:
@@ -119,14 +119,13 @@ bool get_custom_auto_shifted_key(uint16_t keycode, keyrecord_t *record) {
 
 void autoshift_press_user(uint16_t keycode, bool shifted, keyrecord_t *record) {
   switch (keycode) {
-  case KC_BSPC:
-    if (shifted) {
-      tap_code16(KC_DEL);
-    } else {
-      tap_code16(KC_BSPC);
-    }
-    break;
-    break;
+  // case KC_BSPC:
+  //   if (shifted) {
+  //     tap_code16(KC_DEL);
+  //   } else {
+  //     tap_code16(KC_BSPC);
+  //   }
+  //   break;
 
   case KC_AMPERSAND:
     if (shifted) {

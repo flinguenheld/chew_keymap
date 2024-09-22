@@ -49,6 +49,7 @@ enum combos {
   Y_DIAERESIS,
 
   QU,
+  TION,
 
   FRENCH_QUOTE_LEFT,
   FRENCH_QUOTE_RIGHT,
@@ -142,6 +143,7 @@ const uint16_t PROGMEM combo_u_diaeresis[] = {KC_ENT, KC_U, COMBO_END};
 const uint16_t PROGMEM combo_y_diaeresis[] = {KC_ENT, KC_Y, COMBO_END};
 
 const uint16_t PROGMEM combo_qu[] = {CTL_T(KC_SPACE), KC_Q, COMBO_END};
+const uint16_t PROGMEM combo_tion[] = {MO(_NUMERIC), KC_T, COMBO_END};
 
 const uint16_t PROGMEM combo_french_quote_left[] = {KC_A, KC_F, COMBO_END};
 const uint16_t PROGMEM combo_french_quote_right[] = {KC_L, KC_U, COMBO_END};
@@ -229,9 +231,9 @@ combo_t key_combos[] = {
     [I_DIAERESIS] = COMBO(combo_i_diaeresis, CS_I_DIAERESIS),
     [U_DIAERESIS] = COMBO(combo_u_diaeresis, CS_U_DIAERESIS),
     [Y_DIAERESIS] = COMBO(combo_y_diaeresis, CS_Y_DIAERESIS),
-    
 
     [QU] = COMBO(combo_qu, CS_QU),
+    [TION] = COMBO(combo_tion, CS_TION),
 
     [FRENCH_QUOTE_LEFT] COMBO(combo_french_quote_left, US_LDAQ),
     [FRENCH_QUOTE_RIGHT] COMBO(combo_french_quote_right, US_RDAQ),

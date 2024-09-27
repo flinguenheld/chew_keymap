@@ -103,6 +103,9 @@ enum combos {
   ALT_SHIFT_LEFT,
   ENTER_LEFT,
 
+  /* Tests */
+  RUST_MUT,
+
   /* Just to replace the define in config.h */
   COMBO_LENGTH,
 };
@@ -197,6 +200,9 @@ const uint16_t PROGMEM combo_ctrl_shift_left[] = {CTL_T(KC_SPACE), GUI_T(KC_ESC)
 const uint16_t PROGMEM combo_alt_shift_left[] = {KC_LALT, GUI_T(KC_ESC), COMBO_END};
 const uint16_t PROGMEM combo_enter_left[] = {MO(_MOUSE), CTL_T(KC_SPACE), COMBO_END};
 
+/* Tests */
+const uint16_t PROGMEM combo_rust_mut[] = {CTL_T(KC_SPACE), KC_O, KC_P, COMBO_END};
+
 /* Sequences fo keys */
 combo_t key_combos[] = {
     [LEADER] = COMBO(combo_leader, QK_LEAD),
@@ -279,13 +285,16 @@ combo_t key_combos[] = {
 
     [PARENTHESIS_LEFT] = COMBO(combo_parenthesis_left, KC_LEFT_PAREN),
     [PARENTHESIS_RIGHT] COMBO(combo_parenthesis_right, KC_RIGHT_PAREN),
-    [PARENTHESIS_LEFTRIGHT] COMBO_ACTION(combo_parenthesis_leftright),
+    [PARENTHESIS_LEFTRIGHT] = COMBO_ACTION(combo_parenthesis_leftright),
 
     /* One hand special */
     [SHIFT_LEFT] = COMBO(combo_shift_left, KC_LEFT_SHIFT),
     [CTRL_SHIFT_LEFT] = COMBO(combo_ctrl_shift_left, C(S(XXXXXXX))),
     [ALT_SHIFT_LEFT] = COMBO(combo_alt_shift_left, A(S(XXXXXXX))),
     [ENTER_LEFT] = COMBO(combo_enter_left, KC_ENTER),
+
+    /* Tests */
+    [RUST_MUT] = COMBO_ACTION(combo_rust_mut),
 };
 
 /* Parenthesis left/right */
@@ -313,6 +322,16 @@ void process_combo_event(uint16_t combo_index, bool pressed) {
     if (pressed) {
       tap_code16(KC_LEFT_PAREN);
       tap_code16(KC_RIGHT_PAREN);
+    }
+    break;
+
+  case RUST_MUT:
+    if (pressed) {
+      tap_code16(KC_AMPERSAND);
+      tap_code16(KC_M);
+      tap_code16(KC_U);
+      tap_code16(KC_T);
+      tap_code16(KC_SPACE);
     }
     break;
   }

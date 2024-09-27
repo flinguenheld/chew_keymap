@@ -45,7 +45,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
     [_BASE] = LAYOUT(
     //|---------------+--------+--------+--------+--------|       |---------+--------+--------+--------+--------|
-        GUI_T(KC_ESC) ,  KC_C  ,  KC_O  ,  KC_P  ,  KC_V  ,          QK_REP ,  KC_M  ,  KC_D  ,  KC_Y  ,  KC_W  ,
+        GUI_T(KC_ESC) ,  KC_C  ,  KC_O  ,  KC_P  ,  KC_V  ,         QK_LEAD ,  KC_M  ,  KC_D  ,  KC_Y  ,  KC_W  ,
     //|---------------+--------+--------+--------+--------|       |---------+--------+--------+--------+--------|
             KC_A      ,  KC_S  ,  KC_E  ,  KC_N  ,  KC_F  ,           KC_L  ,  KC_R  ,  KC_T  ,  KC_I  ,  KC_U  ,
     //|---------------+--------+--------+--------+--------|       |---------+--------+--------+--------+--------|
@@ -84,7 +84,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
     [_ARROWS] = LAYOUT(
     //|---------+---------+---------+---------+---------|       |---------+---------+--------------+------------+----------|
-        _______ , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX ,         QK_AREP , KC_HOME , KC_PAGE_DOWN , KC_PAGE_UP ,  KC_END  ,
+        _______ , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX ,         XXXXXXX , KC_HOME , KC_PAGE_DOWN , KC_PAGE_UP ,  KC_END  ,
     //|---------+---------+---------+---------+---------|       |---------+---------+--------------+------------+----------|
         XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX ,         XXXXXXX , KC_LEFT ,   KC_DOWN    ,   KC_UP    , KC_RIGHT ,
     //|---------+---------+---------+---------+---------|       |---------+---------+--------------+------------+----------|

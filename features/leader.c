@@ -8,7 +8,7 @@
 void leader_end_user(void) {
   if (leader_sequence_two_keys(KC_M, KC_S)) {
     SEND_STRING("f@linguenheld.fr");
-  } else if (leader_sequence_two_keys(KC_M, KC_L)) {
+  } else if (leader_sequence_two_keys(KC_M, KC_A)) {
     SEND_STRING("florent@linguenheld.fr");
   } else if (leader_sequence_two_keys(KC_F, KC_L)) {
     SEND_STRING("flinguenheld");
@@ -18,7 +18,7 @@ void leader_end_user(void) {
   } else if (leader_sequence_three_keys(KC_H, KC_U, KC_B)) {
     SEND_STRING("https://github.com/flinguenheld/");
   } else if (leader_sequence_three_keys(KC_Q, KC_M, KC_K)) {
-    SEND_STRING("$HOME/qmk_firmware/keyboards/chew/keymaps/chew_keymap");
+    SEND_STRING("$HOME/qmk_firmware/keyboards/chew/split/keymaps/chew_keymap");
   } else if (leader_sequence_three_keys(KC_Q, KC_M, KC_C)) {
     SEND_STRING("qmk compile && qmk flash");
 
@@ -26,6 +26,9 @@ void leader_end_user(void) {
     SEND_STRING("test01234");
   } else if (leader_sequence_three_keys(KC_A, KC_D, KC_M)) {
     SEND_STRING("admin01234");
+
+  } else if (leader_sequence_three_keys(KC_L, KC_O, KC_C)) {
+    SEND_STRING("https://localhost:");
 
   } else if (leader_sequence_two_keys(KC_U, KC_S)) {
     SEND_STRING("setxkbmap us altgr-intl");

@@ -40,8 +40,12 @@
 #endif
 
 /* Auto shift ♥ */
-#define AUTO_SHIFT_TIMEOUT 105
-#define TAPPING_TERM 105
+#define AUTO_SHIFT_TIMEOUT 100
+#define TAPPING_TERM 100
+
+/* Combos ♥ ♥ */
+#define COMBO_TERM 15
+#define COMBO_ONLY_FROM_LAYER 0
 
 /* Unicode */
 #define UNICODE_SELECTED_MODES UNICODE_MODE_LINUX

@@ -14,6 +14,16 @@
         - And add the macro in the process_combo_event() function
 */
 
+// Allow all combos to work with the numeric layer
+uint8_t combo_ref_from_layer(uint8_t layer){
+    switch (get_highest_layer(layer_state)){
+        case _NUMERIC: return _BASE;
+        default: return layer;
+    }
+    return layer;
+}
+
+// --
 enum combos {
   LEADER,
   BOOTLOADER,
@@ -127,11 +137,11 @@ const uint16_t PROGMEM combo_cap_lock[] = {MO(_ARROWS), KC_U, COMBO_END};
 // const uint16_t PROGMEM combo_dead_circumflex[] = {MO(_NUMERIC), KC_T, COMBO_END};
 // const uint16_t PROGMEM combo_dead_diaeresis[] = {MO(_NUMERIC), KC_T, COMBO_END};
 
-const uint16_t PROGMEM combo_e_acute[] = {CTL_T(KC_SPACE), KC_E, COMBO_END};
+const uint16_t PROGMEM combo_e_acute[] = {CTL_T(KC_SPACE), KC_O, COMBO_END};
 const uint16_t PROGMEM combo_c_cedilla[] = {CTL_T(KC_SPACE), KC_C, COMBO_END};
 
 const uint16_t PROGMEM combo_a_grave[] = {CTL_T(KC_SPACE), KC_A, COMBO_END};
-const uint16_t PROGMEM combo_e_grave[] = {CTL_T(KC_SPACE), KC_O, COMBO_END};
+const uint16_t PROGMEM combo_e_grave[] = {CTL_T(KC_SPACE), KC_E, COMBO_END};
 const uint16_t PROGMEM combo_u_grave[] = {MO(_NUMERIC), KC_U, COMBO_END};
 
 const uint16_t PROGMEM combo_a_circumflex[] = {MO(_MOUSE), KC_A, COMBO_END};
